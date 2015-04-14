@@ -263,6 +263,106 @@
             </section>
             <section>
             	<section>
+            		<h2>Anatomy of a Typical ETL Project</h2>
+            	</section>
+            	<section>
+            		<h2>Phases of an ETL Project</h2>
+            		<ul>
+            			<li>Requirement</li>
+            			<li>Planning</li>
+            			<li>Analysis</li>
+            			<li>Implementation</li>
+            			<li>Documentation</li>
+            		</ul>
+            	</section>
+            	<section>
+            		<h2>Requirements</h2>
+            		<ul>
+            			<li>Functional</li>
+            			<ul>
+            				<li>Input</li>
+            				<li>Output Data</li>
+            				<li>Transformations</li>
+            			</ul>
+            			<li>Non-functional</li>
+            			<ul>
+            				<li>Time Considerations</li>
+            				<li>Availability</li>
+            				<li>Frequency and Latency</li>
+            				<li>Data Quality</li>
+            			</ul>
+            		</ul>
+            	</section>
+            	<section>
+            		<h2>Planning</h2>
+            		<ul>
+            			<li>Biggest risk is unexpected data quality issues</li>
+            			<li>Iterate</li>
+            		</ul>
+            	</section>
+            	<section>
+            		<h2>Analysis - Extraction</h2>
+            		<ul>
+            			<li><b>Where</b> is the data?</li>
+            			<li><b>What</b> does the data look like?</li>
+            			<li><b>How much</b> is there?</li>
+            			<li><b>How fast</b> is the data created or changed?</li>
+            		</ul>
+            	</section>
+            	<section>
+            		<h2>Analysis - Transformation</h2>
+            		<ul>
+            			<li>Validation</li>
+            			<ul>
+            				<li>Who is the trusted source?</li>
+            				<li>What about data that can't be validated?</li>
+						</ul>
+						<li>Restart Logic</li>
+            			<ul>
+            				<li>Volume dictates methods</li>
+						</ul>
+            		</ul>
+            	</section>
+            	<section>
+            		<h2>Analysis - Load</h2>
+            		<ul>
+            			<li>Everything You Considered in Extract</li>
+            			<li>Plus Historical Changes
+            			<ul>
+            				<li>SCD Type 1 - Current State Only<li>
+            				<li>SCD Type 2 - Full History</li>
+            				<li>SCD Type 3 - Previous (or Original) + Current<li>
+						</ul>
+					</ul>
+				</section>
+				<section>
+					<h2>Implementation</h2>
+					<ul>
+						<li>Enforce a Standard</li>
+						<ul>
+							<li>Naming Conventions</li>
+							<li>Consistent Patterns</li>
+						</ul>
+						<li>Testing</li>
+						<ul>
+							<li>Unit Testing</li>
+							<li>Production Data</li>
+						</ul>
+					</ul>
+				</section>
+				<section>
+					<h2>Example of ETL Standards</h2>
+					<ul>
+						<li>Extract data needed for business logic locally</li>
+						<li>Corrollary: TRAN steps don't need the database</li>
+						<li>"Land" data often</li>
+						<li>Never throw away data invisibly</li>
+						<li>Every stop
+					</ul>
+				</section>
+            </section>
+            <section>
+            	<section>
             		<h1>Intro to Master Data Management</h1>
             	</section>
             	<section>
