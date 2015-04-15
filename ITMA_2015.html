@@ -32,8 +32,14 @@
         <div class="slides">
             <section>
 				<section>
-                <h1>Healthcare Data Analytics</h1>
+                <h1>Modern Data Integration - ITMA April 2015</h1>
                 <h2>Tom Fish | Alex Jantz</h2>
+				</section>
+				<section>
+                <h1>Tom Fish</h1>
+				</section>
+				<section>
+                <h1>Alex Jantz</h1>
 				</section>
             </section>
             <section>
@@ -182,15 +188,7 @@
 						- Gartner
 					</h4>
                 </section>
-				<section>
-					<h2>Integration Patterns</h2>
-					<ul>
-						<li>Remote Procedure Call</li>
-						<li>Asynchronous messaging</li>
-						<li>Shared database</li>
-						<li>File transfer</li>
-					</ul>
-				</section>
+				
                 <section>
                     <h2>The need for timely information</h2>
                     <img src="integration1.png" />
@@ -229,24 +227,183 @@
 			</section>
 			<section>
 				<section>
-					<h2>Real-Time Data Integration Patterns</h2>
+					<h2>Integration Patterns</h2>
+					<h4>How can I integrate multiple applications so that they work together and can exchange information?</h4>
 					<ul>
-					<li>Transactional Data Processing</li>
-					<ul>
-						<li>Data Replication</li>
-					</ul>
-					<li>Data Integration Hub (DIH)</li>
-					<li>Event Driven Architecture (EDA)</li>
+						<li>Remote Procedure Call</li>
+						<li>Asynchronous messaging</li>
+						<li>Shared database</li>
+						<li>File transfer</li>
 					</ul>
 				</section>
 				<section>
-                    <h2>Transactional Data Processing</h2>
-                    <img src="Transactional1.png" />
+                    <h2>Remote Procedure Call</h2>
+                    <img src="rpc1.png" />
+					
+                </section>
+				<section>
+                    <h2>Remote Procedure Call</h2>
+
+					<h4>Develop each application as a large-scale object or component with encapsulated data. Provide an interface to allow other applications to interact with the running application.</h4>
+                </section>
+				<section>
+                    <h2>When to use it</h2>
+					<ul>
+						<li>Want to share data among independent apps</li>
+						<li>Data needs to stay with the source</li>
+						<li>Service Oriented</li>
+						<ul>
+							<li>Encapsulation</li>
+							<li>Abstraction</li>
+							<li>Interoperable</li>
+						</ul>
+						<li>Good for mashup applications</li>
+					</ul>
+                </section>
+				<section>
+                    <h2>Considerations</h2>
+					<ul>
+						<li>Coupling / Blocking</li>
+						<li>Security</li>
+						<ul>
+							<li>lacks uniformity</li>
+							<li>lowest common denominator</li>
+						</ul>
+						<li>Cloud</li>
+						<ul>
+							<li>Http Oriented</li>
+							<li>AVOID Transactions</li>
+						</ul>
+					</ul>
+                </section>
+				<section>
+                    <h2>Tools</h2>
+					<ul>
+						<li>Biztalk Server</li>
+						<li>Mule Cloud Hub</li>
+						<li>Node.js, .Net, Java, etc</li>
+						
+					</ul>
+                </section>
+				<section>
+                    <h2>Example</h2>
+                    <img class="stretch" src="PointToPoint.png" />
+					
+                </section>
+				<section>
+                    <h2>Asynchronous Messaging</h2>
+                    <img class="stretch" src="Hub1.png" />
+					
+                </section>
+				<section>
+                    <h2>Asynchronous Messaging</h2>
+					<h4>Use Messaging to transfer packets of data frequently, immediately, reliably, and asynchronously, using customizable formats.</h4>
+                </section>
+				<section>
+                    <h2>When to use it</h2>
+					<ul>
+						<li>Fire and Forget</li>
+						<li>Share data in responsive and scalable way</li>
+						<li>Stateful or Stateless</li>
+
+					</ul>
+                </section>
+				<section>
+                    <h2>Considerations</h2>
+					<ul>
+						<li>Not Real Time</li>
+						<li>Idempotence often needed</li>
+						<li>Cloud</li>
+						<ul>
+							<li>Poor Application Support</li>
+							<li>Security (firewall challenges)</li>
+							<li>Data limits</li>
+						</ul>
+					</ul>
+                </section>
+				<section>
+                    <h2>Tools</h2>
+					<ul>
+						<li>Biztalk Server</li>
+						<li>Mule ESB</li>
+						<li>Azure Service Bus</li>
+						
+					</ul>
+                </section>
+				<section>
+					<table class="tableizer-table">
+					<tr class="tableizer-firstrow"><th>Evaluation Parameter</th><th>Hub</th><th>Bus Product</th><th>ESB</th></tr>
+					 <tr><td>Installation Effort </td><td>Less effort</td><td>Moderate effort</td><td>Moderate effort</td></tr>
+					 <tr><td>Administration</td><td>Easy</td><td>Complex</td><td>Complex</td></tr>
+					 <tr><td>Cost</td><td>High</td><td>High</td><td>Low</td></tr>
+					</table>
+					<p>http://ggatz.com/images/Enterprise_20Integration_20-_20SOA_20vs_20EAI_20vs_20ESB.pdf</p>
+				</section>
+				<section>
+                    <h2>Example: Ground to Cloud</h2>
+                    <img src="async_message2.png" />
+					
+                </section>
+				<section>
+                    <h2>Example: Cloud to Ground</h2>
+                    <img src="async_message3.png" />
+					
+                </section>
+				<section>
+                    <h2>Shared Database</h2>
+                    <img src="shared_database.png" />
+					
+                </section>
+				<section>
+                    <h2>Shared Database</h2>
+					<h4>Integrate applications by having them store their data in a single Shared Database.</h4>
+                </section>
+				<section>
+                    <h2>When to use it</h2>
+					<ul>
+						<li>Fastest method</li>
+						<li>Dependent systems are all consistent</li>
+						<li>Want to impose single access strategy</li>
+
+					</ul>
+                </section>
+				<section>
+                    <h2>Considerations</h2>
+					<ul>
+						<li>Difficulty of common format</li>
+						<li>Tight Coupling</li>
+						<li>Poor Performance over distances</li>
+						<li>Scalability / Distribution Concerns</li>
+						<li>API or Query based</li>
+					</ul>
+                </section>
+				<section>
+                    <h2>Tools</h2>
+					<ul>
+						<li>Hosted Database</li>
+						<li>Vendor based storage products</li>						
+					</ul>
+                </section>
+				<section>
+                    <h2>Example: Ground to Cloud</h2>
+                    <img src="shared_database2.png" />
+					
+                </section>
+				<section>
+                    <h2>Example: Cloud to Cloud</h2>
+                    <img src="shared_database3.png" />
+					
+                </section>
+				<section>
+                    <h2>Example: Cloud to Ground</h2>
+                    <img src="shared_database4.png" />
+					
                 </section>
 				<section>
                     <h2>Transactional Data Processing</h2>
                     <img src="Transactional2.png" />
                 </section>
+				
 				<section>
                     <h2>Data Integration Hub</h2>
                     <img src="Hub1.png" />
@@ -410,6 +567,7 @@
             	</section>
             	<section>
             		<h2>Overall Architecture</h2>
+					<img src="BoomiCloudIntegration.JPG" />
 
             	</section>
             </section>
