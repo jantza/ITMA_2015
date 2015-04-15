@@ -32,8 +32,9 @@
         <div class="slides">
             <section>
 				<section>
-                <h1>Modern Data Integration - ITMA April 2015</h1>
-                <h2>Tom Fish | Alex Jantz</h2>
+                <h1>Modern Data Integration</h1>
+				 <h2>ITMA April 2015</h2>
+                <h4>Tom Fish | Alex Jantz</h4>
 				</section>
 				<section>
                 <h1>Tom Fish</h1>
@@ -247,7 +248,7 @@
 					<h4>Develop each application as a large-scale object or component with encapsulated data. Provide an interface to allow other applications to interact with the running application.</h4>
                 </section>
 				<section>
-                    <h2>When to use it</h2>
+                    <h2>Remote Procedure Call: When to use it</h2>
 					<ul>
 						<li>Want to share data among independent apps</li>
 						<li>Data needs to stay with the source</li>
@@ -261,7 +262,7 @@
 					</ul>
                 </section>
 				<section>
-                    <h2>Considerations</h2>
+                    <h2>Remote Procedure Call: Considerations</h2>
 					<ul>
 						<li>Coupling / Blocking</li>
 						<li>Security</li>
@@ -277,7 +278,7 @@
 					</ul>
                 </section>
 				<section>
-                    <h2>Tools</h2>
+                    <h2>Remote Procedure Call: Tools</h2>
 					<ul>
 						<li>Biztalk Server</li>
 						<li>Mule Cloud Hub</li>
@@ -298,10 +299,15 @@
                 </section>
 				<section>
                     <h2>Asynchronous Messaging</h2>
+                    <img class="stretch" src="async_message.png" />
+					
+                </section>
+				<section>
+                    <h2>Asynchronous Messaging</h2>
 					<h4>Use Messaging to transfer packets of data frequently, immediately, reliably, and asynchronously, using customizable formats.</h4>
                 </section>
 				<section>
-                    <h2>When to use it</h2>
+                    <h2>Asynchronous Messaging: When to use it</h2>
 					<ul>
 						<li>Fire and Forget</li>
 						<li>Share data in responsive and scalable way</li>
@@ -310,7 +316,7 @@
 					</ul>
                 </section>
 				<section>
-                    <h2>Considerations</h2>
+                    <h2>Asynchronous Messaging: Considerations</h2>
 					<ul>
 						<li>Not Real Time</li>
 						
@@ -323,7 +329,7 @@
 					</ul>
                 </section>
 				<section>
-                    <h2>Tools</h2>
+                    <h2>Asynchronous Messaging: Tools</h2>
 					<ul>
 						<li>Biztalk Server</li>
 						<li>Mule ESB</li>
@@ -338,21 +344,28 @@
 					 <tr><td>Administration</td><td>Easy</td><td>Complex</td><td>Complex</td></tr>
 					 <tr><td>Cost</td><td>High</td><td>High</td><td>Low</td></tr>
 					</table>
-					<small>http://ggatz.com/images/Enterprise_20Integration_20-_20SOA_20vs_20EAI_20vs_20ESB.pdf</small>
+					
 				</section>
 				<section>
                     <h2>Example: Ground to Cloud</h2>
-                    <img style="width:80%; class="stretch"  src="async_message2.png" />
+                    <img style="width:80%;" class="stretch"  src="async_message2.png" />
 					
                 </section>
 				<section>
                     <h2>Example: Cloud to Ground</h2>
-                    <img style="width:95%; class="stretch"  src="async_message3.png" />
+                    <img style="width:95%;" class="stretch"  src="async_message3.png" />
 					
                 </section>
+				
+				<section>
+					<h2>Automated Clearing House</h2>
+                    <img style="width:95%;" class="stretch" src="iat_receiving_chart.gif" />
+					
+                </section>
+				
 				<section>
                     <h2>Shared Database</h2>
-                    <img style="width:100%; class="stretch"  src="shared_database.png" />
+                    <img style="width:100%;" class="stretch"  src="shared_database.png" />
 					
                 </section>
 				<section>
@@ -360,7 +373,7 @@
 					<h4>Integrate applications by having them store their data in a single Shared Database.</h4>
                 </section>
 				<section>
-                    <h2>When to use it</h2>
+                    <h2>Shared Database: When to use it</h2>
 					<ul>
 						<li>Fastest method</li>
 						<li>Dependent systems are all consistent</li>
@@ -369,7 +382,7 @@
 					</ul>
                 </section>
 				<section>
-                    <h2>Considerations</h2>
+                    <h2>Shared Database: Considerations</h2>
 					<ul>
 						<li>Difficulty of common format</li>
 						<li>Tight Coupling</li>
@@ -379,7 +392,7 @@
 					</ul>
                 </section>
 				<section>
-                    <h2>Tools</h2>
+                    <h2>Shared Database: Tools</h2>
 					<ul>
 						<li>Hosted Database</li>
 						<li>Vendor based storage products</li>						
@@ -410,7 +423,7 @@
 					<h4>Have each application produce files containing information that other applications need to consume. Integrators take the responsibility of transforming files into different formats. Produce the files at regular intervals according to the nature of the business.</h4>
                 </section>
 				<section>
-                    <h2>When to use it</h2>
+                    <h2>File Transfer: When to use it</h2>
 					<ul>
 						<li>Delayed Data is OK</li>
 						<li>Large Datasets</li>
@@ -421,7 +434,7 @@
 					</ul>
                 </section>
 				<section>
-                    <h2>Considerations</h2>
+                    <h2>File Transfer: Considerations</h2>
 					<ul>
 						<li>Time needed to process</li>
 						<li>Complex to change / deploy</li>
@@ -430,7 +443,7 @@
 					</ul>
                 </section>
 				<section>
-                    <h2>Tools</h2>
+                    <h2>File Transfer: Tools</h2>
 					<ul>
 						<li>SSIS</li>
 						<li>Informatica</li>	
@@ -457,7 +470,7 @@
 					<small>http://insights.wired.com/profiles/blogs/why-buses-don-t-fly-in-the-cloud-thoughts-on-esbs</small>
                 </section>
 				<section>
-                    <h2>When to use it</h2>
+                    <h2>IPaaS: When to use it</h2>
 					<ul>
 						<li>Integration with SaaS is a requirement</li>
 						<li>Hybrid Cloud or Full-Cloud Solution</li>
@@ -468,7 +481,7 @@
 					</ul>
                 </section>
 				<section>
-                    <h2>Considerations</h2>
+                    <h2>IPaaS: Considerations</h2>
 					<ul>
 						<li>SLA</li>
 						<li>Security</li>
@@ -476,7 +489,7 @@
 					</ul>
                 </section>
 				<section>
-                    <h2>Tools</h2>
+                    <h2>IPaaS: Tools</h2>
 					<ul>
 						<li>Dell Boomi</li>
 						<li>Snaplogic</li>
